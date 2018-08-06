@@ -11,8 +11,26 @@ body {
 
 button {
     display: block;
-    margin: 0 auto;
-    
+    margin: 4em auto;
+    width: 200px;
+    cursor: pointer;
+    letter-spacing: 0;
+    padding: 1.3em;
+    border-radius: 4em;
+    font-size: .8em;
+    background-color: rgb(21, 196, 158);
+    box-shadow: 0 2px 2px #000;
+    border: none;
+    transition: all .1s ease-in;
+}
+
+button:hover {
+    background-color: rgb(27, 155, 127);
+}
+
+button:active {
+    transform: translateY(2px);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.473);
 }
 
 h1 {
@@ -20,7 +38,7 @@ h1 {
     color: rgba(0, 0, 0, .5);
     text-align: center;
     text-transform: uppercase;
-    letter-spacing: .5em;
+    letter-spacing: .3em;
     width: 100%;
 }
 

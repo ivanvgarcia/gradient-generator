@@ -11,7 +11,8 @@ function init() {
 }
 
 function setCSSText() {
-    css.textContent = body.style.background + ';';
+    css.textContent = body.style.backgroundImage + ';';
+    console.log(body.style);
 }
 
 function setGradient() {
@@ -28,13 +29,17 @@ function rgbToHex(r, g, b) {
     return "#" + componentToHex(r) + componentToHex(g) + componentToHex(b);
 }
 
+function randomNumber() {
+    return Math.floor(Math.random() * 256);
+}
+
 function randomGradient() {
-    var r1 = Math.floor(Math.random() * 256);
-    var g1 = Math.floor(Math.random() * 256);
-    var b1 = Math.floor(Math.random() * 256);
-    var r2 = Math.floor(Math.random() * 256);
-    var g2 = Math.floor(Math.random() * 256);
-    var b2 = Math.floor(Math.random() * 256);
+    var r1 = randomNumber();
+    var g1 = randomNumber();
+    var b1 = randomNumber();
+    var r2 = randomNumber();
+    var g2 = randomNumber();
+    var b2 = randomNumber();
     convertedRGB1 = rgbToHex(r1, g1, b1);
     convertedRGB2 = rgbToHex(r2, g2, b2);
     body.style.background = 'linear-gradient(to right,' + convertedRGB1 + ',' + convertedRGB2 + ')';
